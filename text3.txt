@@ -1,0 +1,62 @@
+# Pass, many instances in each section
+#| Expected output:
+Success!
+Schemes(3):
+        snap(S,N,A,P)
+        HasSameAddress(X,Y)
+        Id(id,id)
+Facts(5):
+        snap('12345','C. Brown','12 Apple','555-1234').
+        snap('33333','Snoopy','12 Apple','555-1234').
+        snap('33333','Snoopy','12 Apple','555-1234').
+        snap('33333','Snoopy','12 Apple','555-1234').
+        snap('33333','Snoopy','12 Apple','555-1234').
+Rules(4):
+        HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+        HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+        HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+        HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+Queries(5):
+        HasSameAddress('Snoopy',Who)?
+        HasSameAddress('Snoopy',Who)?
+        HasSameAddress('Snoopy',Who)?
+        HasSameAddress('Snoopy',Who)?
+        HasSameAddress('Snoopy',Who)?
+Domain(6):
+        '12 Apple'
+        '12345'
+        '33333'
+        '555-1234'
+        'C. Brown'
+        'Snoopy'
+|#
+
+Schemes:
+  snap(S,N,A,P)
+
+#comment
+
+  HasSameAddress(X,Y)
+  Id(id,id)
+
+Facts: #comment
+  snap('12345','C. Brown','12 Apple','555-1234').
+  snap('33333','Snoopy','12 Apple','555-1234').
+  snap('33333','Snoopy','12 Apple','555-1234').
+  snap('33333','Snoopy','12 Apple','555-1234').
+  snap('33333','Snoopy','12 Apple','555-1234').
+
+Rules:
+  HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+  HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+  HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+  HasSameAddress(X,Y) :- snap(A,X,B,C),snap(D,Y,B,E).
+
+#comment
+
+Queries:
+  HasSameAddress('Snoopy',Who)?
+  HasSameAddress('Snoopy',Who)?
+  HasSameAddress('Snoopy',Who)?
+  HasSameAddress('Snoopy',Who)?
+  HasSameAddress('Snoopy',Who)?
