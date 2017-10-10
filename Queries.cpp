@@ -24,6 +24,6 @@ void Queries::toString()
 {
 	cout << "Queries(" << queries.size() << "):" << endl;
 	for (unsigned int i = 0; i < queries.size(); i++) {
-		cout << "\t" << queries[i]->toString() << endl;
+		cout << "  " << queries[i]->toString() << endl;
 	}
 }

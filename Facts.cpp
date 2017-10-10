@@ -23,7 +23,7 @@ void Facts::toString()
 {
 	cout << "Facts(" << facts.size() << "):" << endl;
 	for (unsigned int i = 0; i < facts.size(); i++) {
-		cout << "\t" << facts[i]->toString() << "." << endl;
+		cout << "  " << facts[i]->toString() << "." << endl;
 	}
 
 }

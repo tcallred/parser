@@ -21,6 +21,6 @@ void Schemes::toString()
 {
 	cout << "Schemes(" << schemes.size() << "):" << endl;
 	for (unsigned int i = 0; i < schemes.size(); i++) {
-		cout << "\t" << schemes[i]->toString() << endl;
+		cout << "  " << schemes[i]->toString() << endl;
 	}
 }

@@ -23,6 +23,6 @@ void Rules::toString()
 {
 	cout << "Rules(" << rules.size() << "):" << endl;
 	for (unsigned int i = 0; i < rules.size(); i++) {
-		cout << "\t" << rules[i]->toString() << endl;
+		cout << "  " << rules[i]->toString() << endl;
 	}
 }

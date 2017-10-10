@@ -22,6 +22,6 @@ void Domain::toString()
 {
 	cout << "Domain(" << strings.size() << "):" << endl;
 	for (set<string>::iterator it = strings.begin(); it != strings.end(); ++it) {
-		cout << "\t" << *it << endl;
+		cout << "  " << *it << endl;
 	}
 }
